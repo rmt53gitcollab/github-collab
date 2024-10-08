@@ -6,5 +6,6 @@ router.get('/', (req, res) => {
 });
 
 router.get('/register', Controller.register);
+router.get('/login', Controller.login);
 
 module.exports = router;
