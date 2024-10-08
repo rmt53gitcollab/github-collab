@@ -1,10 +1,11 @@
+"use strict"
 const express = require('express');
 const app = express();
-const port = 3000;
-const route = require('./routers');
+const port = process.env.PORT || 3000;
+const router = require('./routers');
 
-app.use(route);
+app.use(router);
 
 app.listen(port, () => {
-    console.log(`This app is listening on port: ${port}`);
+    console.log(`Server is listening on port ${port}`);
 });
